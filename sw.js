@@ -1,5 +1,5 @@
 // Keeps the guide working with no signal in the showroom.
-const CACHE = 'byd-guide-0adb9c051c';
+const CACHE = 'byd-guide-bd78e2267e';
 const SHELL = ["./","./index.html","./manifest.webmanifest","./favicon.svg","./icon-192.png","./icon-512.png","./apple-touch-icon.png","./cars/atto2.jpg","./cars/atto8.jpg","./cars/dolphinsurf.jpg","./cars/m9.jpg","./cars/sealion5.jpg","./cars/sealion6dmi.jpg","./cars/sealion6dmiawd.jpg","./cars/sealion6ev.jpg","./cars/shark6.jpg","./cars/ti7.jpg"];
 self.addEventListener('install', e => { e.waitUntil(caches.open(CACHE).then(c => c.addAll(SHELL)).then(() => self.skipWaiting())); });
 self.addEventListener('activate', e => { e.waitUntil(caches.keys().then(k => Promise.all(k.filter(n => n !== CACHE && n !== 'byd-fonts').map(n => caches.delete(n)))).then(() => self.clients.claim())); });
