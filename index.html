@@ -1,0 +1,15 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>BYD Showroom Guide has moved</title><meta name="robots" content="noindex">
+<script>
+// The guide moved to https://byd-eg.github.io/ . Keep the page path (car, line-up, comparison) and the advisor details after #.
+(function(){
+  var NEW = 'https://byd-eg.github.io/';
+  var rest = location.pathname.replace(/^\/byd-guide\/?/, '').replace(/index\.html$/, '');
+  try { if (navigator.serviceWorker) navigator.serviceWorker.getRegistrations().then(function(rs){ rs.forEach(function(r){ r.unregister(); }); }); } catch (e) {}
+  location.replace(NEW + rest + location.search + location.hash);
+})();
+</script></head>
+<body style="font-family:system-ui,sans-serif;padding:24px">
+<p>The BYD Showroom Guide has moved to <a href="https://byd-eg.github.io/">byd-eg.github.io</a>.</p>
+</body></html>
